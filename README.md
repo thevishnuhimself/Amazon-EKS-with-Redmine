@@ -214,7 +214,7 @@ _**Step - 6: We need to launch a MYSQL which will be connected to the RED-MINE. 
                                          persistentVolumeClaim:
                                            claimName: efs-mysql
                                            
-_**Step - 8: Now, it's time to launch our RED-MINE Architecture & connect it to our MYSQL Database. Here also, I have picked up the Passwords & other crucial data from the pre-created secret file that we had created in Step 6. The YML code is as follows-**_
+_**Step - 7: Now, it's time to launch our RED-MINE Architecture & connect it to our MYSQL Database. Here also, I have picked up the Passwords & other crucial data from the pre-created secret file that we had created in Step 6. The YML code is as follows-**_
 
                                           apiVersion: v1
                                           kind: Service
