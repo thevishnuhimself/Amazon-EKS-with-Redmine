@@ -142,20 +142,22 @@ _**STEP 4: Next, I have created a YML code to modify some permisssions using ROL
                        kind: ClusterRole
                        name: cluster-admin
                        apiGroup: rbac.authorization.k8s.io
-**_STEP - 5: Next, I have created a secret using YML code, so that I don't have to reveal my passwords & other crucial info later in the Ghost & MYSQL launching codes. Here, I am giving an example of a secret creation but not putting in the actual values. Note that the passwords need to Base 64 Encoded before they are put in a secret.**_
-
-                        apiVersion: v1
-                        kind: Secret
-                        metadata:
-                          name: mysql-redmine
-                        data:
-                           password: cmVkaGF0
-                           dcdatabase: cHJvamVjdF9kYg==
-                              sqlrootpassword: cm9vdHBhc3M=
-                              sqluser: c3BhcnNo
-                              sqlpassword: cmVkaGF0
-                              sqldb: cHJvamVjdF9kYg==
-_**Step - 7: We need to launch a MYSQL which will be connected to the RED-MINE. For this purpose, I have used MYSQL version 5.7. I have picked up the Passwords from the pre-created secret file. The YML code is as follows- **_
+ _**STEP - 5: Next, I have created a secret using YML code, so that I don't have to reveal my passwords & other crucial info later in the Ghost & MYSQL launching codes. Here, I am giving an example of a secret creation but not putting in the actual values. Note that the passwords need to Base 64 Encoded before they are put in a secret.**_
+ 
+                              apiVersion: v1
+                              kind: Secret
+                              metadata:
+                                name: mysql-redmine
+                              data:
+                                 password: cmVkaGF0
+                                 dcdatabase: cHJvamVjdF9kYg==
+                                    sqlrootpassword: cm9vdHBhc3M=
+                                    sqluser: c3BhcnNo
+                                    sqlpassword: cmVkaGF0
+                                    sqldb: cHJvamVjdF9kYg==
+                              
+                              
+_**Step - 6: We need to launch a MYSQL which will be connected to the RED-MINE. For this purpose, I have used MYSQL version 5.7. I have picked up the Passwords from the pre-created secret file. The YML code is as follows-**_
 
                                  apiVersion: v1
                                  kind: Service
